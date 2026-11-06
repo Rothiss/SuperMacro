@@ -146,10 +146,9 @@ function GetActionCooldown( actionid )
 			return oldGetActionCooldown( actionid );
 		end
 
-		local buttonName = this:GetName() or ("BActionButton"..actionid);	-- The part after 'or' is to support Bongos [Fixed by Threewords]
-
 		local macroname, pic;
-		if ( this ) then
+		if ( this and this.GetName ) then
+			local buttonName = this:GetName() or ("BActionButton"..actionid);	-- The part after 'or' is to support Bongos [Fixed by Threewords]
 			macroname=getglobal(buttonName.."Name");
 			if ( macroname ) then
 				macroname:SetText(name);
