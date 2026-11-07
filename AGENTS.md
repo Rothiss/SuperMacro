@@ -44,6 +44,6 @@
   it is a user-created customization file. Do not add it or "fix" the reference.
 
 ## Misc
-- `README.md` and `functions.txt` are user docs, not code; `CHANGELOG.md` holds the version
-  history, and `functions.txt` is the canonical reference for the addon's functions/slash commands.
+- `README.md` is the user doc (usage + function/slash-command reference); `CHANGELOG.md`
+  holds the version history.
 - Version strings disagree: `.toc` says `3.19`, `SUPERMACRO_VERSION` in `SuperMacro.lua` is `"3.18"`.
