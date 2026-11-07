@@ -1,8 +1,8 @@
 # AGENTS.md
 
 ## What this is
-- World of Warcraft 1.12 (vanilla) macro addon. This fork targets Turtle WoW and
-  requires the SuperWoW client extension (511-char macros; Turtle buff/debuff caps).
+- World of Warcraft 1.12 (vanilla) macro addon. This fork targets OctoWoW and
+  requires the SuperWoW client extension (511-char macros; OctoWoW buff/debuff caps).
 - Pure Lua 5.0 + WoW `.xml`/`.toc`. No build, test, lint, or CI tooling exists and
   nothing can be run locally — verification is read-only/static only.
 
@@ -44,6 +44,6 @@
   it is a user-created customization file. Do not add it or "fix" the reference.
 
 ## Misc
-- `readme.txt` (full history) and `functions.txt` are user docs, not code; `functions.txt` is
-  the canonical reference for the addon's functions/slash commands.
+- `README.md` and `functions.txt` are user docs, not code; `CHANGELOG.md` holds the version
+  history, and `functions.txt` is the canonical reference for the addon's functions/slash commands.
 - Version strings disagree: `.toc` says `3.19`, `SUPERMACRO_VERSION` in `SuperMacro.lua` is `"3.18"`.
