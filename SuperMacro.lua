@@ -186,10 +186,10 @@ function SuperMacroFrame_Update()
 			-- Highlight Selected Macro
 			if ( macroID == SuperMacroFrame.selectedMacro ) then
 				macroButton:SetChecked(1);
-    				SuperMacroFrameSelectedMacroName:SetText(name);
-					SuperMacroFrameText:SetText(body);
+    				SuperMacroFrameSelectedMacroName:SetText(name or "");
+					SuperMacroFrameText:SetText(body or "");
 					SuperMacroFrameSelectedMacroButton:SetID(macroID);
-    				SuperMacroFrameSelectedMacroButtonIcon:SetTexture(texture);
+    				SuperMacroFrameSelectedMacroButtonIcon:SetTexture(texture or "");
 			else
 				macroButton:SetChecked(0);
 			end
@@ -272,9 +272,9 @@ function SuperMacroFrame_Update()
 			-- Highlight Selected Macro
 			if ( macroID == SuperMacroFrame.selectedSuper ) then
 				macroButton:SetChecked(1);
-				SuperMacroFrameSelectedMacroName:SetText(name);
-				SuperMacroFrameSuperText:SetText(body);
-				SuperMacroFrameSelectedMacroSuperButtonIcon:SetTexture(texture);
+				SuperMacroFrameSelectedMacroName:SetText(name or "");
+				SuperMacroFrameSuperText:SetText(body or "");
+				SuperMacroFrameSelectedMacroSuperButtonIcon:SetTexture(texture or "");
 			else
 				macroButton:SetChecked(0);
 			end
