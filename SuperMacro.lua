@@ -565,6 +565,7 @@ function SuperMacroFrame_SaveSuperMacro()
 end
 
 function SuperMacroFrame_OnEvent(event)
+	local player=UnitName("player").." of "..GetRealmName();
 	if ( event=="TRADE_SKILL_SHOW") then
 		if ( not old_SM_TradeSkillSkillButton_OnClick) then
 			old_SM_TradeSkillSkillButton_OnClick = TradeSkillSkillButton_OnClick;
@@ -635,7 +636,6 @@ function SuperMacroFrame_OnEvent(event)
 		ToggleSMWordWrap();
 		SuperMacroInitExtend()
 		SM_ORDERED=SortSuperMacroList();
-		local player=UnitName("player").." of "..GetRealmName();
 		if ( not SM_ACTION_SUPER[player] ) then
 			SM_ACTION_SUPER[player]={};
 		end
@@ -1013,8 +1013,10 @@ end
 function SortSuperMacroList()
 	-- sort SM_SUPER into ordered list
 	local a={};
-	for n in pairs(SM_SUPER) do
+	local n = next(SM_SUPER)
+	while n do
 		table.insert(a, n);
+		n = next(SM_SUPER, n)
 	end
 	table.sort(a, atoz);
 	return a;

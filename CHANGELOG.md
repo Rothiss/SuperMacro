@@ -5,7 +5,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/), versions are the
 
 ## [Unreleased]
 
+### Added
+- Add `FindDebuff(odebuff, unit)` and the `debuffed` alias (ported from Monteo/SuperMacro).
+
 ### Fixed
+- Fix nil `player` in `SuperMacroFrame_OnEvent` (hoisted to function scope; ported from Monteo/SuperMacro).
+- Use `math.mod` instead of the bare `mod` global in the macrotip command (ported from Monteo/SuperMacro).
 - Fix action-bar cooldown/icon breakage with pfUI (nil-guard `this` in `GetActionCooldown`). (2026-11-06)
 - Fix some slash commands not working in combat. (2026-04-01)
 - Fix compatibility with nampower and action-set-saving addons. (2026-03-04)

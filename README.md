@@ -345,6 +345,15 @@ buffed("gouge", 'target')    -- target's buff; returns "debuff", id
 buffed("perception")         -- returns "buff", id
 ```
 
+### FindDebuff(odebuff, unit), debuffed
+
+Check whether a unit has a specific debuff. `odebuff` is the debuff's name or part of it (not case-sensitive); `unit` defaults to `'player'`. Returns the debuff index and name.
+
+```lua
+debuffed("gouge")             -- player's debuff; returns index, name
+FindDebuff("gouge", 'target') -- target's debuff
+```
+
 ### SpellReady(spell)
 
 Check whether a specific spell is off cooldown.
